@@ -10,6 +10,30 @@ var users = require('./routes/users');
 
 var app = express();
 
+
+//myInclude/////
+var mongoose = require('mongoose');
+
+//connect to MONGODB
+mongoose.connect('mongodb://localhost:27017/local');
+
+
+var fs = require('fs');
+
+//LOAD ALL FILES FROM MONGODBMODE LS
+fs.readdirSync(__dirname+'/models').forEach(function(filename){       //ERRORS
+  if(~filename.indexOf('.js')) require(__dirname+'/models/'+filename);
+});
+
+
+
+
+///#endMyInclude
+
+
+
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
