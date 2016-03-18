@@ -1,6 +1,3 @@
-/**
- * Created by Stacjonarny on 2016-03-15.
- */
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
@@ -12,3 +9,5 @@ var partnerSchema = new Schema({
     {collection: 'partners'});
 
 mongoose.model('partner',partnerSchema);
+
+/// test
