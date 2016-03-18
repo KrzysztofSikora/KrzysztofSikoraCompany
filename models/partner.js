@@ -9,4 +9,4 @@ var partnerSchema = new Schema({
     {collection: 'partners'});
 
 mongoose.model('partner',partnerSchema);
-// test
+// test st
